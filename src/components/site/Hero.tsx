@@ -34,7 +34,7 @@ export default function Hero() {
           className="body-text max-w-md mb-10 animate-fade-up"
           style={{ animationDelay: "0.6s", opacity: 0 }}
         >
-          Mais de 40 anos construindo relacionamentos estratégicos, liderança feminina e resultados
+          Mais de 40 anos construindo relacionamentos estratégicos, liderança e resultados
           com propósito. Da Amazônia para o mundo — com fé e estratégia.
         </p>
 
