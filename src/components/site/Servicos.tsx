@@ -43,7 +43,7 @@ const servicos = [
   {
     icon: Coffee,
     title: "Café com Katti",
-    desc: "O evento mensal mais esperado de Manaus. Encontro presencial de mulheres que constroem, inspiram e se reconectam com propósito.",
+    desc: "O evento mensal mais esperado de Belém. Encontro presencial de mulheres que constroem, inspiram e se reconectam com propósito.",
     cta: "Próxima edição",
     href: wa("Quero saber mais sobre o Café com Katti"),
   },
