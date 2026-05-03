@@ -35,7 +35,7 @@ export default function Hero() {
           style={{ animationDelay: "0.6s", opacity: 0 }}
         >
           Mais de 40 anos construindo relacionamentos estratégicos, liderança feminina e resultados
-          com propósito. De Belém para o mundo — com fé e estratégia.
+          com propósito. Da Amazônia para o mundo — com fé e estratégia.
         </p>
 
         <div
