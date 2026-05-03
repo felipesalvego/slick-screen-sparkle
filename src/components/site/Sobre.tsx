@@ -1,4 +1,4 @@
-import portrait from "@/assets/katti-portrait.jpg";
+import portrait from "@/assets/katti-portrait.png";
 
 const tags = [
   "Mentoria",

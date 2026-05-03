@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/katti-logo.png";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -29,13 +28,8 @@ export default function Navbar() {
       }`}
     >
       <nav className="container max-w-7xl flex items-center justify-between">
-        <a href="#top" aria-label="Katti Elleres — Início" className="flex items-center">
-          <img
-            src={logo}
-            alt="Katti Elleres"
-            className="h-10 sm:h-12 w-auto object-contain"
-            style={{ filter: "invert(1) brightness(1.05)" }}
-          />
+        <a href="#top" className="font-serif italic text-xl md:text-2xl text-cream tracking-wide">
+          Katti <span className="text-gold">Elleres</span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
