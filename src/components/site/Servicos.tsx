@@ -21,6 +21,18 @@ const servicos = [
     href: wa("Quero garantir minha vaga no Workshop 22:22!"),
   },
   {
+    icon: Sparkles,
+    title: "Workshop Método S.E.R.",
+    badge: "27/05 · Belém · R$127",
+    badgeTheme: "gold",
+    desc: "Workshop presencial de transformação humana alinhada à NR1. Segurança, Essência e Resultado. Bônus: sessão individual de realinhamento para os 10 primeiros.",
+    price: "R$ 127",
+    priceFrom: "R$ 227",
+    priceSuffix: "/ pessoa",
+    cta: "Garantir minha vaga",
+    href: "https://metodoser.kattielleres.com.br",
+  },
+  {
     icon: MessageCircle,
     title: "Rede Internacional de Networking",
     desc: "Grupo exclusivo de WhatsApp com mais de 640 mulheres em Europa, EUA, Japão e Brasil. Conexões estratégicas que atravessam fronteiras e geram oportunidades reais.",
@@ -99,9 +111,26 @@ export default function Servicos() {
                 </p>
 
                 {s.price && (
-                  <div className="font-serif text-3xl sm:text-4xl font-light text-gold mb-4">
-                    {s.price}{" "}
-                    <small className="text-sm font-sans font-light">{s.priceSuffix}</small>
+                  <div className="flex items-baseline gap-2 mb-4">
+                    {s.priceFrom && (
+                      <span className="text-[15px] text-foreground/35 line-through font-sans font-light">
+                        {s.priceFrom}
+                      </span>
+                    )}
+                    <span className="font-serif text-3xl sm:text-4xl font-light text-gold">
+                      {s.price}{" "}
+                      <small className="text-sm font-sans font-light">{s.priceSuffix}</small>
+                    </span>
+                  </div>
+                )}
+
+                {s.badge && (
+                  <div className={`inline-block text-[10px] tracking-[0.15em] uppercase px-3 py-1.5 rounded mb-4 font-semibold ${
+                    s.badgeTheme === "gold"
+                      ? "bg-gold/20 text-gold border border-gold/30"
+                      : "bg-gold/10 text-gold/80 border border-gold/20"
+                  }`}>
+                    {s.badge}
                   </div>
                 )}
 

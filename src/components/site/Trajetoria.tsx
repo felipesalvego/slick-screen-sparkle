@@ -1,3 +1,13 @@
+import acpLogo from "@/assets/org-logos/acp.png";
+import cdlLogo from "@/assets/org-logos/cdl.png";
+import ciespLogo from "@/assets/org-logos/ciesp.png";
+import aspaLogo from "@/assets/org-logos/aspa.png";
+import ibraLogo from "@/assets/org-logos/ibra.png";
+import acedvLogo from "@/assets/org-logos/acedv.png";
+import kcLogo from "@/assets/org-logos/kc.png";
+import sebraeLogo from "@/assets/org-logos/sebrae.png";
+import lyLogo from "@/assets/org-logos/ly.png";
+
 const trajetoria = [
   {
     org: "K E Representações Ltda",
@@ -32,15 +42,15 @@ const trajetoria = [
 ];
 
 const orgs = [
-  ["ACP", "Assoc. Comercial do Pará"],
-  ["CDL", "CDL Mulher"],
-  ["CIESP", "CIESP Campinas"],
-  ["ASPA", "Assoc. Produtores"],
-  ["IBRA", "Instituto IBRA"],
-  ["ACEDV", "ACEDV 50 Anos"],
-  ["KC", "Kimberly-Clark"],
-  ["SEBRAE", "EMPRETEC"],
-  ["LY", "Laughter Yoga"],
+  { abbr: "ACP", name: "Assoc. Comercial do Pará", logo: acpLogo },
+  { abbr: "CDL", name: "CDL Mulher", logo: cdlLogo },
+  { abbr: "CIESP", name: "CIESP Campinas", logo: ciespLogo },
+  { abbr: "ASPA", name: "Assoc. Produtores", logo: aspaLogo },
+  { abbr: "IBRA", name: "Instituto IBRA", logo: ibraLogo },
+  { abbr: "ACEDV", name: "ACEDV 50 Anos", logo: acedvLogo },
+  { abbr: "KC", name: "Kimberly-Clark", logo: kcLogo },
+  { abbr: "SEBRAE", name: "EMPRETEC", logo: sebraeLogo },
+  { abbr: "LY", name: "Laughter Yoga", logo: lyLogo },
 ];
 
 export default function Trajetoria() {
@@ -72,16 +82,14 @@ export default function Trajetoria() {
         <div className="reveal" style={{ transitionDelay: "150ms" }}>
           <span className="label-eyebrow !mb-6">Presença em Organizações</span>
           <div className="grid grid-cols-3 gap-px bg-border">
-            {orgs.map(([l, n]) => (
+            {orgs.map((org) => (
               <div
-                key={l}
-                className="bg-[hsl(var(--green-card))] py-7 px-3 flex flex-col items-center justify-center gap-2 hover:bg-gold/5 transition-colors text-center"
+                key={org.abbr}
+                className="bg-[hsl(var(--green-card))] py-5 px-3 flex flex-col items-center justify-center gap-2 hover:bg-gold/5 transition-colors text-center"
               >
-                <div className="font-serif text-2xl sm:text-3xl font-semibold text-gold leading-none">
-                  {l}
-                </div>
+                <img src={org.logo} alt={org.name} className="h-10 w-auto object-contain" />
                 <div className="text-[9px] sm:text-[10px] tracking-[0.08em] uppercase text-foreground/60 leading-tight">
-                  {n}
+                  {org.name}
                 </div>
               </div>
             ))}
