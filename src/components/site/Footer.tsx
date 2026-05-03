@@ -2,9 +2,12 @@ export default function Footer() {
   return (
     <footer className="px-6 sm:px-10 py-8 bg-black/40 border-t border-border">
       <div className="container max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-5">
-        <div className="font-serif italic text-lg text-cream/70">
-          Katti <span className="text-gold">Elleres</span>
-        </div>
+        <img
+          src={new URL("../../assets/katti-logo.png", import.meta.url).href}
+          alt="Katti Elleres"
+          className="h-9 w-auto object-contain opacity-70"
+          style={{ filter: "invert(1) brightness(0.95)" }}
+        />
         <p className="text-[10px] sm:text-[11px] text-foreground/30 tracking-[0.08em]">
           © {new Date().getFullYear()} Katti Elleres. Todos os direitos reservados.
         </p>
